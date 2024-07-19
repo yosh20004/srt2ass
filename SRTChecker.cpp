@@ -20,7 +20,7 @@ const bool SRTChecker::test() {
     try {
         idx_check();
     } catch (IdxParseError& e) {
-        std::cout << e.what();
+        std::cout << e.what() << std::endl;
         int showNum = e.nums.size() >= 4 ? 
             3 : e.nums.size();
         for (int i = 0; i < showNum; ++i) {
@@ -29,13 +29,22 @@ const bool SRTChecker::test() {
         if (showNum == 3) {
             std::cout << " ..." << std::endl;
         }
-        //打印具体错误信息
+        //打印部分错误信息
     }
 
     try {
         time_check();
     } catch (TimeStampError& e) {
-        std::cout << e.what();
+        std::cout << e.what() << std::endl;
+        int showNum = e.errLines.size() >= 4 ? 
+            3 : e.errLines.size();
+        for (int i = 0; i < showNum; i++) {
+            std::cout << " " << e.errLines[i] << std::endl;
+        }
+        if (showNum == 3) {
+            std::cout << " ..." << std::endl;
+        }
+        //打印部分错误信息
         return false;
     }
 
@@ -68,11 +77,11 @@ void SRTChecker::empty() {
 
 
 void SRTChecker::time_check() {
-    TimeStampError e("illegal timestamp");
+    TimeStampError e("[severe error] illegal timestamp");
 
     for (const auto& i : this -> file_data) {
         if (!__check(i.Time)) {
-            e.errLines.push_back(i.text);
+            e.errLines.push_back(i.Time);
         }
     }
 

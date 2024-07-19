@@ -10,4 +10,11 @@ add_executable(srt2ass
     main.cpp
     SRTReader.h
     SRTReader.cpp
+    SRTChecker.h
+    SRTChecker.cpp
+    timecheck.h
+    srtTransfer.h
+    srtTransfer.cpp
+    ASSWriter.cpp
+    ASSWriter.h
 )

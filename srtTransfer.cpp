@@ -15,9 +15,10 @@ srtTransfer::srtTransfer(const std::vector<SubtitleEntry>& file_data) : __file_d
         AssSubtitleEntry temp {
             .Time = time_transfer(Time), .text = Text
         };
+        ass_data.push_back(temp);
     }
 
-    this -> __ass_data = ass_data;
+    this -> __ass_data = std::move(ass_data);
 }
 
 
@@ -29,7 +30,8 @@ std::string srtTransfer::time_transfer(std::string_view data) {
             target.push_back('.');
         } else if (i == '>') {
             target.push_back(',');
-        } else if (std::isdigit(i)) {
+        } 
+        else if (std::isdigit(i) || i == ':') {
             target.push_back(i);
         }
     }

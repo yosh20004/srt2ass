@@ -7,9 +7,16 @@
 #include <vector>
 #include<algorithm>
 
+struct SRTReaderError {
+    SRTReaderError(const char* msg) : msg_(msg) {}
+    const char* what() {return msg_;}
+    private:
+        const char* msg_;
+};
+
 
 class SRTReader {
-    private:
+    public:
         struct SubtitleEntry {
             std::optional<int> index;
             std::string Time;
@@ -18,21 +25,21 @@ class SRTReader {
 
     public:
         SRTReader() = delete;
-        SRTReader(const std::string& _path) : path(_path) {}
-        std::vector<SubtitleEntry> readLine();
+        SRTReader(const std::string& _path);
+        void readLine();
+        void __test_write_back();
 
     public:
         std::string & getPath() & {return path;}
-        const auto & getEntry() & {return input_file;}
+        const auto & getEntry() & {return file_data;}
 
     private:
-        std::vector<SubtitleEntry> input_file;
+        std::vector<SubtitleEntry> file_data;
         std::string path;
 
     private:
-        static const bool isNumber(std::string_view str);
+        static const bool isNumber(std::string& str);
         const bool check_empty(std::string_view data);
-        void __test_write_back(const std::vector<SubtitleEntry>& t);
 
 };
 

@@ -5,6 +5,15 @@
 #include "srtTransfer.h"
 #include <string_view>
 
+
+struct ASSWriterError {
+    ASSWriterError(const char* msg) : msg_(msg) {}
+    const char* what() {return msg_;}
+    private:
+        const char* msg_;
+};
+
+
 using AssSubtitleEntry = srtTransfer::AssSubtitleEntry;
 
 

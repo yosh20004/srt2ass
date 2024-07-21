@@ -66,6 +66,13 @@ std::string srtTransfer::time_transfer(std::string_view data) {
     return StartTime + ',' + EndTime;
 }
 
+
+srtTransfer::~srtTransfer() {
+    std::cout << "\n\nFailed";
+    exit(-1);
+}
+
+
 void searchNumBack(std::string& time, const int loc) {
     for (int i = loc; i >= 0; ++i) {
         if (std::isdigit(time[i])) {

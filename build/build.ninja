@@ -12,7 +12,7 @@
 
 # =============================================================================
 # Project: srt2ass
-# Configurations: 
+# Configurations: Release
 # =============================================================================
 
 #############################################
@@ -20,6 +20,11 @@
 
 ninja_required_version = 1.5
 
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Release
 # =============================================================================
 # Include auxiliary files.
 
@@ -44,37 +49,37 @@ cmake_ninja_workdir = D$:/Videos/cudaMasterClass/CUDA$ programming$ Masterclass$
 
 build cmake_object_order_depends_target_srt2ass: phony || .
 
-build CMakeFiles/srt2ass.dir/main.cpp.obj: CXX_COMPILER__srt2ass_unscanned_ D$:/Videos/cudaMasterClass/CUDA$ programming$ Masterclass$ with$ C++$ 2020-04/05$ CUDA$ Streams/tran/srt2ass/main.cpp || cmake_object_order_depends_target_srt2ass
+build CMakeFiles/srt2ass.dir/main.cpp.obj: CXX_COMPILER__srt2ass_unscanned_Release D$:/Videos/cudaMasterClass/CUDA$ programming$ Masterclass$ with$ C++$ 2020-04/05$ CUDA$ Streams/tran/srt2ass/main.cpp || cmake_object_order_depends_target_srt2ass
   DEP_FILE = CMakeFiles\srt2ass.dir\main.cpp.obj.d
-  FLAGS = -std=gnu++20
+  FLAGS = -O3 -DNDEBUG -std=gnu++20
   INCLUDES = -I"D:/Videos/cudaMasterClass/CUDA programming Masterclass with C++ 2020-04/05 CUDA Streams/tran/srt2ass/."
   OBJECT_DIR = CMakeFiles\srt2ass.dir
   OBJECT_FILE_DIR = CMakeFiles\srt2ass.dir
 
-build CMakeFiles/srt2ass.dir/SRTReader.cpp.obj: CXX_COMPILER__srt2ass_unscanned_ D$:/Videos/cudaMasterClass/CUDA$ programming$ Masterclass$ with$ C++$ 2020-04/05$ CUDA$ Streams/tran/srt2ass/SRTReader.cpp || cmake_object_order_depends_target_srt2ass
+build CMakeFiles/srt2ass.dir/SRTReader.cpp.obj: CXX_COMPILER__srt2ass_unscanned_Release D$:/Videos/cudaMasterClass/CUDA$ programming$ Masterclass$ with$ C++$ 2020-04/05$ CUDA$ Streams/tran/srt2ass/SRTReader.cpp || cmake_object_order_depends_target_srt2ass
   DEP_FILE = CMakeFiles\srt2ass.dir\SRTReader.cpp.obj.d
-  FLAGS = -std=gnu++20
+  FLAGS = -O3 -DNDEBUG -std=gnu++20
   INCLUDES = -I"D:/Videos/cudaMasterClass/CUDA programming Masterclass with C++ 2020-04/05 CUDA Streams/tran/srt2ass/."
   OBJECT_DIR = CMakeFiles\srt2ass.dir
   OBJECT_FILE_DIR = CMakeFiles\srt2ass.dir
 
-build CMakeFiles/srt2ass.dir/SRTChecker.cpp.obj: CXX_COMPILER__srt2ass_unscanned_ D$:/Videos/cudaMasterClass/CUDA$ programming$ Masterclass$ with$ C++$ 2020-04/05$ CUDA$ Streams/tran/srt2ass/SRTChecker.cpp || cmake_object_order_depends_target_srt2ass
+build CMakeFiles/srt2ass.dir/SRTChecker.cpp.obj: CXX_COMPILER__srt2ass_unscanned_Release D$:/Videos/cudaMasterClass/CUDA$ programming$ Masterclass$ with$ C++$ 2020-04/05$ CUDA$ Streams/tran/srt2ass/SRTChecker.cpp || cmake_object_order_depends_target_srt2ass
   DEP_FILE = CMakeFiles\srt2ass.dir\SRTChecker.cpp.obj.d
-  FLAGS = -std=gnu++20
+  FLAGS = -O3 -DNDEBUG -std=gnu++20
   INCLUDES = -I"D:/Videos/cudaMasterClass/CUDA programming Masterclass with C++ 2020-04/05 CUDA Streams/tran/srt2ass/."
   OBJECT_DIR = CMakeFiles\srt2ass.dir
   OBJECT_FILE_DIR = CMakeFiles\srt2ass.dir
 
-build CMakeFiles/srt2ass.dir/srtTransfer.cpp.obj: CXX_COMPILER__srt2ass_unscanned_ D$:/Videos/cudaMasterClass/CUDA$ programming$ Masterclass$ with$ C++$ 2020-04/05$ CUDA$ Streams/tran/srt2ass/srtTransfer.cpp || cmake_object_order_depends_target_srt2ass
+build CMakeFiles/srt2ass.dir/srtTransfer.cpp.obj: CXX_COMPILER__srt2ass_unscanned_Release D$:/Videos/cudaMasterClass/CUDA$ programming$ Masterclass$ with$ C++$ 2020-04/05$ CUDA$ Streams/tran/srt2ass/srtTransfer.cpp || cmake_object_order_depends_target_srt2ass
   DEP_FILE = CMakeFiles\srt2ass.dir\srtTransfer.cpp.obj.d
-  FLAGS = -std=gnu++20
+  FLAGS = -O3 -DNDEBUG -std=gnu++20
   INCLUDES = -I"D:/Videos/cudaMasterClass/CUDA programming Masterclass with C++ 2020-04/05 CUDA Streams/tran/srt2ass/."
   OBJECT_DIR = CMakeFiles\srt2ass.dir
   OBJECT_FILE_DIR = CMakeFiles\srt2ass.dir
 
-build CMakeFiles/srt2ass.dir/ASSWriter.cpp.obj: CXX_COMPILER__srt2ass_unscanned_ D$:/Videos/cudaMasterClass/CUDA$ programming$ Masterclass$ with$ C++$ 2020-04/05$ CUDA$ Streams/tran/srt2ass/ASSWriter.cpp || cmake_object_order_depends_target_srt2ass
+build CMakeFiles/srt2ass.dir/ASSWriter.cpp.obj: CXX_COMPILER__srt2ass_unscanned_Release D$:/Videos/cudaMasterClass/CUDA$ programming$ Masterclass$ with$ C++$ 2020-04/05$ CUDA$ Streams/tran/srt2ass/ASSWriter.cpp || cmake_object_order_depends_target_srt2ass
   DEP_FILE = CMakeFiles\srt2ass.dir\ASSWriter.cpp.obj.d
-  FLAGS = -std=gnu++20
+  FLAGS = -O3 -DNDEBUG -std=gnu++20
   INCLUDES = -I"D:/Videos/cudaMasterClass/CUDA programming Masterclass with C++ 2020-04/05 CUDA Streams/tran/srt2ass/."
   OBJECT_DIR = CMakeFiles\srt2ass.dir
   OBJECT_FILE_DIR = CMakeFiles\srt2ass.dir
@@ -87,7 +92,8 @@ build CMakeFiles/srt2ass.dir/ASSWriter.cpp.obj: CXX_COMPILER__srt2ass_unscanned_
 #############################################
 # Link the executable srt2ass.exe
 
-build srt2ass.exe: CXX_EXECUTABLE_LINKER__srt2ass_ CMakeFiles/srt2ass.dir/main.cpp.obj CMakeFiles/srt2ass.dir/SRTReader.cpp.obj CMakeFiles/srt2ass.dir/SRTChecker.cpp.obj CMakeFiles/srt2ass.dir/srtTransfer.cpp.obj CMakeFiles/srt2ass.dir/ASSWriter.cpp.obj
+build srt2ass.exe: CXX_EXECUTABLE_LINKER__srt2ass_Release CMakeFiles/srt2ass.dir/main.cpp.obj CMakeFiles/srt2ass.dir/SRTReader.cpp.obj CMakeFiles/srt2ass.dir/SRTChecker.cpp.obj CMakeFiles/srt2ass.dir/srtTransfer.cpp.obj CMakeFiles/srt2ass.dir/ASSWriter.cpp.obj
+  FLAGS = -O3 -DNDEBUG
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\srt2ass.dir
   POST_BUILD = cd .

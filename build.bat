@@ -15,7 +15,8 @@ if not exist "%BUILD_DIR%" (
 cd "%BUILD_DIR%"
 
 :: 运行 CMake 配置
-cmake .. || goto :error
+
+cmake -DCMAKE_BUILD_TYPE=Release .. || goto :error
 
 :: 运行编译
 cmake --build . || goto :error

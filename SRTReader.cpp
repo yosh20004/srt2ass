@@ -1,4 +1,5 @@
 #include "SRTReader.h"
+#include <cstdlib>
 #include <fstream>
 
 
@@ -23,14 +24,14 @@ SRTReader::SRTReader(const std::string& _path) : path(_path) {
     auto is_file_exist = [&_path]() {
         std::ifstream in(_path);
         if (!in.is_open()) {
-            throw FileNotExist{"[severe error] file not exists", _path};
+            throw FileNotExist{"[severe error] file not existed: ", _path};
         }
     };
 
     try {
         is_file_exist();
     } catch (FileNotExist& e) {
-        std::cout << e.what() << std::endl;
+        std::cout << e.what() ;
         std::cout << e.path << std::endl;
         this->~SRTReader();
     }
@@ -153,5 +154,11 @@ void SRTReader::__test_write_back() {
             out << "\r";
         }
     }
+}
+
+
+SRTReader::~SRTReader() {
+    std::cout << "\n\nFailed" << std::endl;
+    exit(-1);
 }
 

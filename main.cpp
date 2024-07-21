@@ -15,7 +15,7 @@ std::string Tpath;
 
 auto analyse(int argc, char* argv[]) -> const bool {
     if (argc == 1) {
-        std::cout << "necessary message needed";
+        std::cout << "[severe error] necessary message needed" << std::endl;
         return false;
     } else if (argc == 2) {
         path = argv[1];
@@ -25,6 +25,7 @@ auto analyse(int argc, char* argv[]) -> const bool {
             Tpath += "ass";
             return true;
         } else {
+            std::cout << "[severe error] not a .srt file" << std::endl;
             return false;
         }
     } else {
@@ -36,6 +37,7 @@ auto analyse(int argc, char* argv[]) -> const bool {
 
 int main(int argc, char* argv[]) {
     if (!analyse(argc, argv)) {
+        std::cout << "\n\nFailed";
         return -1;
     }
 

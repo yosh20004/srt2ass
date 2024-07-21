@@ -26,6 +26,7 @@ class SRTReader {
     public:
         SRTReader() = delete;
         SRTReader(const std::string& _path);
+        ~SRTReader();
         void readLine();
         void __test_write_back();
 

@@ -1,10 +1,14 @@
 # ninja log v6
-7	918	7432730760924472	CMakeFiles/srt2ass.dir/main.cpp.obj	1e7158bdc4817ee7
-15	952	7432730761014481	CMakeFiles/srt2ass.dir/SRTReader.cpp.obj	67c68fdda153f62f
-954	1298	7432730770394485	srt2ass.exe	c2f034ed6544127c
-24	2780	7432700002282037	CMakeFiles/srt2ass.dir/SRTChecker.cpp.obj	6c07482df1dd6bb7
+7	777	7432805089696501	CMakeFiles/srt2ass.dir/main.cpp.obj	1e7158bdc4817ee7
+7	864	7432799882228281	CMakeFiles/srt2ass.dir/SRTReader.cpp.obj	67c68fdda153f62f
+787	1107	7432805097487591	srt2ass.exe	c2f034ed6544127c
+23	4159	7432798356027147	CMakeFiles/srt2ass.dir/SRTChecker.cpp.obj	6c07482df1dd6bb7
 15	3313	7430617097165795	CMakeFiles/srt2ass.dir/timecheck.cpp.obj	ac86ae7f5f607c9
-23	910	7432730761094510	CMakeFiles/srt2ass.dir/ASSWriter.cpp.obj	fd2fe9b71f75d7c5
-32	1004	7432700002372017	CMakeFiles/srt2ass.dir/srtTransfer.cpp.obj	caa69f20824c0ccb
-7	778	7432731499975901	CMakeFiles/srt2ass.dir/ASSWriter.cpp.obj	fd2fe9b71f75d7c5
-781	1105	7432731507715901	srt2ass.exe	c2f034ed6544127c
+22	1088	7432803238347734	CMakeFiles/srt2ass.dir/ASSWriter.cpp.obj	fd2fe9b71f75d7c5
+14	1182	7432803238267746	CMakeFiles/srt2ass.dir/srtTransfer.cpp.obj	caa69f20824c0ccb
+7	1303	7432807256659198	CMakeFiles/srt2ass.dir/main.cpp.obj	490c071a974654c7
+31	1474	7432807256919209	CMakeFiles/srt2ass.dir/srtTransfer.cpp.obj	ba45b9ed00b2ebc5
+15	1643	7432807256749215	CMakeFiles/srt2ass.dir/SRTReader.cpp.obj	f1330fbf78d04852
+41	1778	7432807257009220	CMakeFiles/srt2ass.dir/ASSWriter.cpp.obj	cdd894a07cc9a58d
+23	4587	7432807256829254	CMakeFiles/srt2ass.dir/SRTChecker.cpp.obj	1ec3b44dace3b70c
+4589	4829	7432807302483749	srt2ass.exe	839effb95597ca75

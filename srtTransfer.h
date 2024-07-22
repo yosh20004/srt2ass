@@ -28,7 +28,6 @@ class srtTransfer {
     public:
         srtTransfer() = delete;
         srtTransfer(const std::vector<SubtitleEntry>& file_data);
-        ~srtTransfer();
         const auto getEntry() const {return __ass_data;}
 
     private:

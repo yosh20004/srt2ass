@@ -33,7 +33,6 @@ SRTReader::SRTReader(const std::string& _path) : path(_path) {
     } catch (FileNotExist& e) {
         std::cout << e.what() ;
         std::cout << e.path << std::endl;
-        this->~SRTReader();
     }
 
 }
@@ -156,9 +155,4 @@ void SRTReader::__test_write_back() {
     }
 }
 
-
-SRTReader::~SRTReader() {
-    std::cout << "\n\nFailed" << std::endl;
-    exit(-1);
-}
 

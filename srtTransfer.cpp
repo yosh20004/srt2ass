@@ -7,7 +7,7 @@ srtTransfer::srtTransfer(const std::vector<SubtitleEntry>& file_data) : __file_d
 
     SRTChecker check(file_data);
     if (!check.test()) {
-        this->~srtTransfer();
+        return;
     }
 
     std::vector<AssSubtitleEntry> ass_data;
@@ -66,11 +66,6 @@ std::string srtTransfer::time_transfer(std::string_view data) {
     return StartTime + ',' + EndTime;
 }
 
-
-srtTransfer::~srtTransfer() {
-    std::cout << "\n\nFailed";
-    exit(-1);
-}
 
 
 void searchNumBack(std::string& time, const int loc) {
